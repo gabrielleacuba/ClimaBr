@@ -14,13 +14,13 @@
           #searchInput
           (ionChange)="onSearch(searchInput.value)"
         ></ion-searchbar>
+        <ion-text  *ngIf="history" text-left>
+          <h5>Últimas Consultas</h5>
+        </ion-text>
         <app-error-message
           message="{{errorMessage}}"
           *ngIf="hasError"
         ></app-error-message>
-        <ion-text  *ngIf="history" text-left>
-          <h5>Últimas Consultas</h5>
-        </ion-text>
         <ion-list lines="none" *ngIf="!hasError">
           <app-city-details
             *ngFor="let city of cities"
