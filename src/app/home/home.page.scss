@@ -25,3 +25,10 @@ ion-button {
   --box-shadow: none;
   width: 200px;
 }
+
+ion-text{
+  h5{
+    margin-left: 15px;
+    color: var( --ion-color-medium)
+  }
+}

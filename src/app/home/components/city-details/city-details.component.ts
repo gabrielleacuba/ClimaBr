@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { HistorySearchCityService } from 'src/domain/services/history-search-city.service';
 
 @Component({
   selector: 'app-city-details',
@@ -11,11 +12,12 @@ export class CityDetailsComponent implements OnInit {
   @Input() state: string;
   @Output() selectCity: EventEmitter<string> = new EventEmitter();
 
-  constructor() {}
+  constructor(private readonly historySearchCityService: HistorySearchCityService) {}
 
   ngOnInit() {}
 
   onClick() {
+    this.historySearchCityService.insertCity(this.id,this.name,this.state);
     this.selectCity.emit(this.id);
   }
 }
