@@ -22,7 +22,6 @@ export class HomePage {
   ) {}
 
   async ionViewDidEnter() {
-    console.log('Entrei no Enter');
     this.history = true;
     try {
       this.hasError = false;
