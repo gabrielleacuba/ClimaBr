@@ -8,7 +8,7 @@ export class HistorySearchCityService {
     const cities: City[] = await this.cityHistory.getAll();
 
     if(cities.length == 0) {
-      throw new HistoryEmpty ();
+      throw new HistoryEmpty();
     }
 
     return cities;
